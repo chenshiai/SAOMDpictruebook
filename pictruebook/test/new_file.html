@@ -1,0 +1,54 @@
+<html>
+
+	<head>
+		<style>
+			.trapezoid-2 {
+				height: 19px;
+				width: 500px;
+				border-top: 10px solid #e5c3b2;
+				border-left: 0px solid transparent;
+				border-right: 6px solid transparent;
+			}
+			
+			.mask {
+				height: 0;
+				width: 100px;
+				border-top: 100px solid red;
+				border-right: 37px solid transparent;
+			}
+		</style>
+	</head>
+
+	<body onLoad="checkCookie()">
+		<div class="example"></div>
+		<style type="text/css">
+			.example {
+				position: relative;
+				width: 100px;
+				height: 50px;
+				color: #ffff00;
+			}
+			
+			.example:before,
+			.example:after {
+				content: '';
+				position: absolute;
+				top: 0;
+			}
+			
+			.example:before {
+				left: 0;
+				width: 50px;
+				height: 50px;
+				background-color: currentColor;
+			}
+			
+			.example:after {
+				right: 0;
+				border: 25px solid;
+				border-color: transparent transparent currentColor currentColor;
+			}
+		</style>
+	</body>
+
+</html>

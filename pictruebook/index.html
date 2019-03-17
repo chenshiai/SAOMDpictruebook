@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>SAOMD-中文WIKI</title>
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/index.css" />
+		<meta name="keywords" content="刀剑神域，记忆重组，WIKI,SAOMD图鉴">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0" />
+		<script type="text/javascript" src="js/jsLoader.js" ></script>
+		<script type="text/javascript" src="js/cssLoader.js"></script>
+		<script>
+			if(CssSite.Browser.ie){
+            	CssSite.CssLoader.load("css/index.css",function(){}); 
+           		CssSite.CssLoader.load("css/index_760.css",function(){});
+     	 	}else{
+     	 		CssSite.CssLoader.load("css/index.css",function(){}); 
+           		CssSite.CssLoader.load("css/index_760.css",function(){});
+        	}
+		</script>
+	</head>
+
+	<body>
+		<div id="bg"></div>
+		<div id="topic">
+			<div id="topcenter">
+				<a href="index.html" id="backhome" class="home hold">
+					<span>主页</span>
+				</a>
+				<a class="list" onclick="openlist()"></a>
+				<span></span>
+			</div>
+		</div>
+		<div id="leftlist" class="lefthidden">
+			<ul id="leftlistui">
+				<li>
+					<div class="leftListClass">
+						<img src='img/ui/category_02.png'/>
+						<h6><time></time></h6>
+					</div>
+					<span></span>
+				</li>
+				<li>
+					<div class="leftListClass">
+						<img src='img/ui/category_00.png'/>
+						<h6><time></time></h6>
+					</div>
+					<span></span>
+				</li>
+				<li>
+					<div class="leftListClass">
+						<img src='img/ui/category_05.png'/>
+						<h6><time></time></h6>
+					</div>
+					<span></span>
+				</li>
+				<li><span></span></li>
+			</ul>
+		</div>
+		<div id="testtxt" class="menu">
+			<div id="notice" class="not">
+				<div class="text">
+					<span class="txt"></span><br /><br />
+					<span class="txt"></span><br />
+					<span class="txt"></span><br />
+					<span class="txt"></span><br />
+				</div>
+			</div>
+		</div>
+		<div id="question" class="menu" style="">
+			<div id="notice1" class="not">
+				<div class="text">
+					<span><h2>帮助文档</h2></span><br /><br />
+					<span>
+						<!--<a href="help/about.html"><h4>【关于这个网站】</h4></a>
+						<a href="help/chardetail.html"><h4>【关于角色信息】</h4></a>
+						<a href="#"><h4>【数据输入指南】</h4></a>-->
+						<h4>还不知道写啥</h4>
+					</span><br />
+					<span><h4></h4></span><br />
+					<span><h4>再次点击可以关闭</h4></span><br />
+				</div>
+			</div>
+		</div>
+		<div class="logo" id="logo">
+			<a>管理员登录</a>
+		</div>
+		<form id="userlogo" method="post" action="datebase/datebase.php">
+			<span>输入管理员密码</span><br />
+			<input type="password" id="password" name="password" />
+			<a id="ok" onclick="submit()"></a>
+			<a id="close"></a>
+		</form>
+		<!--<div class="find" id="find">
+			<a>查看未完成数据</a>
+		</div>-->
+		<div id="center">
+			<div class="newcard">
+				<div class="newroule">
+					<ul>
+						<li class="roule gradual1"></li>
+						<li class="roule gradual2"></li>
+						<li class="roule gradual3"></li>
+						<li class="roule gradual4"></li>
+						<li class="roule gradual5"></li>
+						<li class="roule gradual6"></li>
+						<li id="jizhun" class=""></li>
+					</ul>
+				</div>
+			</div>
+			<form id="indexform" name="indexform" method="post">
+				<span style="display: block;width: 100%;height:60px;text-align: center;line-height: 60px;color:#4f4f4f;font-size:1.5em ;font-weight: bold;">人物精准筛选</span>
+
+				<div class="select">
+					<ul id="sElement" class="sEle">
+						<span id="Elespan">选择属性</span>
+						<li>
+							<ul id="Ele1" class="nom Ele">
+								<li class="" onclick="SelectEle(1)"><img src="img/Element/icon_unattributed.png"><span>無属性</span></li>
+								<li class="" onclick="SelectEle(2)"><img src="img/Element/icon_wind.png"><span>風属性</span></li>
+								<li class="" onclick="SelectEle(3)"><img src="img/Element/icon_water.png"><span>水属性</span></li>
+								<li class="" onclick="SelectEle(4)"><img src="img/Element/icon_fire.png"><span>火属性</span></li>
+								<li class="" onclick="SelectEle(5)"><img src="img/Element/icon_earth.png"><span>土属性</span></li>
+								<li class="" onclick="SelectEle(6)"><img src="img/Element/icon_light.png"><span>聖属性</span></li>
+								<li class="" onclick="SelectEle(7)"><img src="img/Element/icon_dark.png"><span>闇属性</span></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="select">
+					<ul id="sElement" class="sEle">
+						<span id="Elespan">选择武器</span>
+						<li>
+							<ul id="Ele2" class="nom Ele">
+								<li onclick="SelectWea(1)"><img src="img/weapon/icon_job_1.png"><span>單手劍</span></li>
+								<li onclick="SelectWea(9)"><img src="img/weapon/icon_job_9.png"><span>雙劍</span></li>
+								<li onclick="SelectWea(2)"><img src="img/weapon/icon_job_2.png"><span>細劍</span></li>
+								<li onclick="SelectWea(3)"><img src="img/weapon/icon_job_3.png"><span>短劍</span></li>
+								<li onclick="SelectWea(4)"><img src="img/weapon/icon_job_4.png"><span>單手棍</span></li>
+								<li onclick="SelectWea(5)"><img src="img/weapon/icon_job_5.png"><span>狙擊槍</span></li>
+								<li onclick="SelectWea(10)"><img src="img/weapon/icon_job_10.png"><span>弓箭</span></li>
+								<li onclick="SelectWea(11)"><img src="img/weapon/icon_job_11.png"><span>法杖</span></li>
+								<li onclick="SelectWea(6)"><img src="img/weapon/icon_job_6.png"><span>長矛</span></li>
+								<li onclick="SelectWea(7)"><img src="img/weapon/icon_job_7.png"><span>劍盾</span></li>
+								<li onclick="SelectWea(8)"><img src="img/weapon/icon_job_8.png"><span>自動槍</span></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="select">
+					<ul id="sElement" class="sEle">
+						<span id="Elespan">选择性別</span>
+						<li>
+							<ul id="Ele3" class="nom Ele">
+								<li class="" onclick="SelectSex(1)"><img src="img/sex/icon_gender_male.png"><span>男性</span></li>
+								<li class="" onclick="SelectSex(2)"><img src="img/sex/icon_gender_female.png"><span>女性</span></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="select">
+					<ul id="sElement" class="sEle">
+						<span id="Elespan">选择稀有度</span>
+						<li>
+							<ul id="Ele4" class="nom Ele">
+								<li onclick="SelectRare(1)"><span>四星(4R)</span></li>
+								<li onclick="SelectRare(2)"><span>五星(5R)</span></li>
+								<li onclick="SelectRare(3)"><span>六星(6R)</span></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="select">
+					<ul id="sElement" class="sEle">
+						<span id="Elespan">角色名称</span>
+						<li>
+							<ul id="Ele5" class="nom Ele">
+								<li onclick="SelectRoule(1)"><span>桐人</span></li>
+								<li onclick="SelectRoule(2)"><span>亚丝娜</span></li>
+								<li onclick="SelectRoule(3)"><span>莉法</span></li>
+								<li onclick="SelectRoule(4)"><span>西莉卡</span></li>
+								<li onclick="SelectRoule(5)"><span>莉兹贝特</span></li>
+								<li onclick="SelectRoule(6)"><span>诗乃</span></li>
+								<li onclick="SelectRoule(7)"><span>有纪</span></li>
+								<li onclick="SelectRoule(8)"><span>克莱因</span></li>
+								<li onclick="SelectRoule(9)"><span>艾基尔</span></li>
+								<li onclick="SelectRoule(10)"><span>斯朵蕾雅</span></li>
+								<li onclick="SelectRoule(11)"><span>菲莉亚</span></li>
+								<li onclick="SelectRoule(12)"><span>伶茵</span></li>
+								<li onclick="SelectRoule(13)"><span>赛玟</span></li>
+								<li onclick="SelectRoule(14)"><span>幸</span></li>
+								<li onclick="SelectRoule(15)"><span>亚鲁戈</span></li>
+								<li onclick="SelectRoule(16)"><span>希兹克利夫</span></li>
+								<li onclick="SelectRoule(17)"><span>结衣</span></li>
+								<li onclick="SelectRoule(18)"><span>普蕾蜜亚</span></li>
+								<li onclick="SelectRoule(19)"><span>YUNA</span></li>
+								<li onclick="SelectRoule(20)"><span>尤吉欧</span></li>
+								<li onclick="SelectRoule(21)"><span>爱丽丝</span></li>
+								<li onclick="SelectRoule(22)"><span>莲</span></li>
+								<li onclick="SelectRoule(23)"><span>林鵙鹟</span></li>
+								<li onclick="SelectRoule(24)"><span>不可次郎</span></li>
+								<li onclick="SelectRoule(25)"><span>瑛二</span></li>
+								<li onclick="SelectRoule(26)"><span>其他</span></li>
+								<li onclick="SelectRoule(27)"><span>重置</span></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="sElement" class="sEle1" style="clear: left;" title="点击这里开始检索"><span id="Elespan" onclick="php()">搜索</span></div>
+				<div id="sElement" class="sEle1" title="清空前面所有选项"><span id="Elespan" onclick="cle()">清空选项</span></div>
+			</form>
+			<div id="start">
+			</div>
+			<div id="portrait">
+			</div>
+			
+		</div>
+		<div id="bottomtipc"></div>
+		<div id="globalnotice" title="国际服公告">
+			<img src="img/ui/condition_free_character.png" />
+			<div id="global" class="">由桐谷咸鱼提供的国际服公告代理<br />http://saomd.kiripa.com
+			</div>
+		</div>
+		<div id="kiripa" class="closeglo">
+			<iframe id="kiripaif" frameborder="0" scrolling="yes" width="100%" height="100%" src="">
+				
+			</iframe>
+		</div>
+		<div id="bg2"></div>
+		
+	</body>
+	<botjs>
+	</botjs>
+	<script>
+		var center = document.getElementById("center");
+		var testtxt = document.getElementById("testtxt");
+		var question = document.getElementById("question");
+		var globale = document.getElementById("globalnotice");
+		var left = center.offsetLeft;
+		
+		if(MiniSite.Browser.ie){
+            MiniSite.JsLoader.load("JSON/indexJSON.js",function(){
+            });
+            MiniSite.JsLoader.load("js/list.js",function(){
+            }); 
+            MiniSite.JsLoader.load("js/index.js",function(){
+            });
+        }else{
+            MiniSite.JsLoader.load("JSON/indexJSON.js",function(){
+            });
+            MiniSite.JsLoader.load("js/list.js",function(){
+            });
+            MiniSite.JsLoader.load("js/index.js",function(){
+            });
+        }
+//      if(left <= 120) {
+//			globale.style.right = 7 + "px";
+//			testtxt.style.left = 7 + "px";
+//			question.style.left = 7 + "px";
+//		} else {
+//			globale.style.right = left - 120 + "px";
+//			testtxt.style.left = left - 120 + "px";
+//			question.style.left = left - 120 + "px";
+//		}
+	</script>
+</html>

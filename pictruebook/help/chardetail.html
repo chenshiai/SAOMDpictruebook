@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>帮助文档-关于角色信息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="shortcut icon" href="../img/favicon.ico" />
+		<link rel="stylesheet" href="../css/index.css?v=18728" />
+		<link rel="stylesheet" type="text/css" href="../css/index_760.css?v=18728" />
+		<style type="text/css">
+			#back {
+				margin: 0 auto;
+				width: 120px;
+				height: 55px;
+				background-image: url(../img/ui/goback.png);
+				background-size: 100%;
+				text-align: center;
+				line-height: 54px;
+				color: #606060;
+				font-family: "微软雅黑";
+				font-weight: bold;
+
+			}
+			a{
+				text-decoration: none;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="question" class="menu">
+			<div id="notice1" class="not">
+				<div class="text">
+					<span><h2>帮助文档</h2></span><br /><br />
+					<span>
+						<a href="about.html"><h4>【关于这个网站】</h4></a>
+						<a href="#"><h4>【关于角色信息】</h4></a>
+						<a href="#"><h4>【数据输入指南】</h4></a>
+					</span><br />
+					<span><h4></h4></span><br />
+					<span><h4>再次点击可以关闭</h4></span><br />
+				</div>
+			</div>
+		</div>
+		<div id="center">
+			<div style="width: 90%;margin: 0 auto;">
+				<h1 style="float: none;margin: 0 auto;width: 100%;text-align: center;color: #FFFFFF;">关于角色信息</h1>
+				<hr />
+				<p style="font-size: 23px;" id="ptext">
+					角色信息页面目前有基础面板、剑技、战斗技能、技能槽、以及一些备注的信息。<br />
+					卡池角色数据：80级解放，技能槽全开，无装备，。<br />
+					赠送角色数据：80级解放，技能槽全开，无装备。<br />
+					排位角色数据：100级突破，技能槽全开，附加突破方向备注，无装备。<br />
+					活动角色数据：100级突破，技能槽全开，附加突破方向备注，无装备。<br /><br />
+					能够进化为五星的角色：仍然归类为四星角色，但数据为进化五星之后的。<br />
+				</p>
+				<a href="../index.html">
+					<div id="back">
+						返回首页
+					</div>
+				</a>
+				<br /><br /><br /><br />
+				<p>
+					更新日志：<br /> 2018-7-26：新增帮助文档，包含站点各项说明，不过仅有部分内容，有待充实。
+				</p>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		var center = document.getElementById("center");
+		var question = document.getElementById("question");
+		var notice1 = document.getElementById("notice1");
+		var a = 0;
+		var b = 0;
+
+		question.onclick = function() {
+			if(b == 1) {
+				notice1.style.width = 0 + "px";
+				b = 0;
+			} else {
+				notice1.style.width = 675 + "px";
+				b = 1;
+			}
+
+		}
+		window.onresize = function() {
+			var left = center.offsetLeft;
+			if(left <= 120) {
+				question.style.left = 7 + "px";
+			} else {
+				question.style.left = left - 120 + "px";
+			}
+		}
+		window.onload = function(str) {
+			var left = center.offsetLeft;
+			if(left <= 120) {
+				question.style.left = 7 + "px";
+			} else {
+				question.style.left = left - 120 + "px";
+			}
+		}
+	</script>
+
+</html>

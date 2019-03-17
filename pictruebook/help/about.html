@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>帮助文档-关于网站</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="shortcut icon" href="../img/favicon.ico" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" media="screen and (max-width:760px)" href="../css/index_760.css" />
+		<script type="text/javascript" src="../js/jsLoader.js" ></script>
+		<style type="text/css">
+			#back {
+				margin: 0 auto;
+				width: 120px;
+				height: 55px;
+				background-image: url(../img/ui/goback.png);
+				background-size: 100%;
+				text-align: center;
+				line-height: 54px;
+				color: #606060;
+				font-family: "微软雅黑";
+				font-weight: bold;
+
+			}
+			a{
+				text-decoration: none;
+				
+			}
+			.help{
+				width: 100%;
+			}
+			#ptext{
+				font-size: 1.2em;
+				color: #4F4F4F;
+			}
+			.joinus{
+				width: 100%;
+				height: 600px;
+			}
+			.joinus img{
+				display: block;
+				margin: 0 auto;
+				height: 500px;
+			}
+			@media(max-width: 760px) {
+				.help{
+					width: 95%;
+					margin: 0 auto;
+				}
+				#back {
+					position:fixed;
+					left: 10px;
+					bottom:20px;
+					z-index: 3;
+				}
+				.joinus{
+					width: 95%;
+					margin: 0 auto;
+				}
+				.joinus img{
+					display: block;
+					width: 100%;
+					height: auto;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="bg"></div>
+		<div id="bg2"></div>
+		<div id="topic">
+			<div id="topcenter">
+				<a href="../index.html" id="backhome" class="home">
+					<span>主页</span>
+				</a>
+				<div class="list" onclick="openlist()"></div>
+				<span></span>
+			</div>
+			<script>
+
+			var backhome = document.getElementById("backhome");
+			if(backhome.classList.contains("hold")!=true) {
+				backhome.onmouseover = function() {
+					backhome.classList.add("hold");
+				}
+				backhome.onmouseleave = function() {
+					backhome.classList.remove("hold");
+				}
+			}
+			</script>
+		</div>
+		<div id="leftlist" class="lefthidden">
+			<ul id="leftlistui">
+				<li><img src='../img/ui/category_03.png'/><span></span></li>
+				<li><img src='../img/ui/category_06.png'/><span></span></li>
+				<li><img src='../img/ui/category_05.png'/><span></span></li>
+				<li><span></span></li>
+			</ul>
+			</div>
+		<div id="question" class="menu">
+			<div id="notice1" class="not">
+				<div class="text">
+					<span><h2>帮助文档</h2></span><br /><br />
+					<span>
+						<a href="#"><h4>【关于这个网站】</h4></a>
+						<a href="chardetail.html"><h4>【关于角色详情】</h4></a>
+						<a href="#"><h4>【数据输入指南】</h4></a>
+					</span><br />
+					<span><h4></h4></span><br />
+					<span><h4>再次点击可以关闭</h4></span><br />
+				</div>
+			</div>
+		</div>
+		<div id="center">
+			<div class="help">
+				<h2 style="float: none;margin: 0 auto;width: 100%;text-align: center;color: #FFFFFF;">关于此站</h2>
+				<hr />
+				<p id="ptext">
+					本站主要内容是收集SAOMD国际服中（注意是国际服）所有四星、五星的角色数据，包含基本信息，其中不包含的有：角色背景简介、角色故事。这些东西收集难度大，现阶段人手不足，并没有收录这些的打算。
+				</p>
+				<br />
+				<p id="ptext">
+					因为服务器带宽很小，图片的加载速度会比较慢，先在这里给各位提个醒吧。
+				</p>
+				<br />
+				<p id="ptext">
+					由玩家丨ConGreat(公会：★四星物语☆绿汀茶会)自主搭建。
+				</p>
+				<a href="../index.html">
+					<div id="back">
+						返回首页
+					</div>
+				</a>
+			</div>
+			<div class="joinus">
+				<h2 style="float: none;margin: 0 auto;width: 100%;text-align: center;color: #FFFFFF;">下面是站长群</h2>
+				<h1 style="float: none;margin: 0 auto;width: 100%;text-align: center;color: #FFFFFF;">[QQ群]720339543</h1>
+				<img src="../img/IMG_0625.JPG" />
+			</div>
+		</div>
+		<div id="bottomtipc"></div>
+
+	</body>
+	<script type="text/javascript">
+		var center = document.getElementById("center");
+		var question = document.getElementById("question");
+		var notice1 = document.getElementById("notice1");
+		var a = 0;
+		var b = 0;
+
+		question.onclick = function() {
+			if(b == 1) {
+				notice1.style.width = 0 + "px";
+				b = 0;
+			} else {
+				notice1.style.width = 675 + "px";
+				b = 1;
+			}
+
+		}
+		window.onresize = function() {
+			var left = center.offsetLeft;
+			if(left <= 120) {
+				question.style.left = 7 + "px";
+			} else {
+				question.style.left = left - 120 + "px";
+			}
+		}
+		window.onload = function(str) {
+			var left = center.offsetLeft;
+			if(left <= 120) {
+				question.style.left = 7 + "px";
+			} else {
+				question.style.left = left - 120 + "px";
+			}
+		}
+	</script>
+	<script>
+		if(MiniSite.Browser.ie){
+            MiniSite.JsLoader.load("../JSON/indexJSON.js",function(){
+            });   
+        }else{
+            MiniSite.JsLoader.load("../JSON/indexJSON.js",function(){
+            });
+        }
+        if(MiniSite.Browser.ie){
+            MiniSite.JsLoader.load("../js/list.js",function(){
+            });   
+        }else{
+            MiniSite.JsLoader.load("../js/list.js",function(){
+            });
+        }
+//      if(MiniSite.Browser.ie){
+//          MiniSite.JsLoader.load("../js/index.js",function(){
+//          });   
+//      }else{
+//          MiniSite.JsLoader.load("../js/index.js",function(){
+//          });
+//      }
+	</script>
+
+</html>

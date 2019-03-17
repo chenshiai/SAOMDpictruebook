@@ -1,0 +1,67 @@
+
+	#buff {
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+	#buff li {
+		text-align: center;
+		width: 130px;
+		height: 40px;
+		margin-bottom: 0px;
+		border-right: solid #4F4F4F 1px;
+		border: none;
+	}
+	#buff li img {
+		width: 50px;
+	}
+	#buff li:hover img {
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+	#spleft {
+		position: absolute;
+		width: 130px;
+		display: none;
+		top: 50px;
+		z-index: 2;
+	}
+	#spcenter {
+		float: none;
+		margin: 0 auto;
+		width: 90%;
+		height: auto;
+	}
+	#selectbuff {
+		display: block;
+		position: fixed;
+		z-index: 2;
+		bottom: 40px;
+		left: 10px;
+		height: 55px;
+		width: 120px;
+		text-align: center;
+		line-height: 54px;
+		display: block;
+		color: #FFFFFF;
+		font-size: 20px;
+		background-image: url(../img/ui/button.png);
+		background-size: 100%;
+	}
+	#back {
+		position: fixed;
+		bottom: 40px;
+		right: 10px;
+		height: 55px;
+		width: 120px;
+		float: right;
+		color: #86b1b1;
+		text-shadow: #579393 0 0 2px;
+		background-image: url(../img/ui/goback.png);
+		background-size: 100%;
+		font-family: "微软雅黑";
+		text-align: center;
+		line-height: 54px;
+		margin-top: 0px;
+		margin-right: 0px;
+	}
